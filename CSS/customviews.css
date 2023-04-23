@@ -1,0 +1,82 @@
+
+
+ @media screen and (orientation:portrait) {
+   .customviews {
+     grid-area: customviews;
+     display: none;
+     grid-template:
+       "listview"
+       /2rem;
+     background: #233243;
+     position: absolute;
+     right: 0;
+     height: 90vh;
+     width: 100px;
+     padding: 0px;
+     transition: translate 0.5s;
+     color: lightgrey;
+     box-shadow: 2px 0px 0px #0D2435;
+     animation-name: sidedrawerLR;
+     animation-duration: 0.4s;
+     animation-timing-function: ease-in;
+     animation-fill-mode: ease-in;
+   }
+ }
+  @media screen and (orientation:landscape) {
+    .customviews {
+      grid-area: customviews;
+      display: flex;
+      grid-template:
+        "listview"
+        /2rem;
+      background: #233243;
+      position: absolute;
+      right: 0;
+      height: 90vh;
+      width: 100px;
+      padding: 0px;
+      transition: translate 0.5s;
+      color: lightgrey;
+      box-shadow: 2px 0px 0px #0D2435;
+      animation-name: sidedrawerLR;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: ease-in;
+    }
+  }
+
+
+@keyframes sidedrawerLR{
+  0%{
+    transform: translateX(100%);
+  }
+  50%{
+    transform: translateX(0%);
+  }
+  70%{
+    transform: translateX(5%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+.customviews-ul{
+  grid-area: listview;
+  display: grid;
+  list-style: none;
+  background: #25405D;
+  padding:0px;
+  align-items:center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+}
+
+.customviews-ul li{
+  background: #2E4B6A;
+  display: grid;
+  height:100%;
+  width:100%;
+  align-items: center;
+  margin:0px;
+}

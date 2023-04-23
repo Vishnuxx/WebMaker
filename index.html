@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css" defer>
+  <link rel="stylesheet" href="CSS/cssEditor.css" defer>
+  <link rel="stylesheet" href="CSS/widgetToolbox.css" defer>
+  <link rel="stylesheet" href="CSS/modal.css" defer>
+  <link rel="stylesheet" href="CSS/customviews.css" defer>
+  
+  <script src="data.js" defer></script>
+  <script type="module" src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="layer">
+  </div>
+  <div class=top_nav>
+    <h5 class="navig" id=nav_item1>Editor</h5>
+    <h5 class="navig" id=nav_item2>Source</h5>
+    <h5 class="navig" id=nav_item3>Preview</h5>
+  </div>
+  
+        <!--editor section-->
+       <div id=editorpage>
+          <!--div class=content id=content-->
+            <div id=toolbox>
+              <h6 style="position: sticky; color: grey; font-size: 0.7em; margin:8px auto; height:fit-content; width: 100%; text-align: center;">Widgets</h6>
+            </div>
+            <div class=controlLayer>
+              <!--This is the control border highlighter-->
+              <fieldset class=control_highlighter>
+                <div class=controlbar>widget</div>
+              </fieldset>
+              <!--this is the editing panel-->
+              <iframe id=canvas> </iframe>
+            <!--/div-->
+          </div>
+          
+          <div class="options"></div>
+        
+          <div class="customviews">
+            <ul class ="customviews-ul">
+              <li>A</li>
+              <li>B</li>
+              <li>C</li>
+            </ul>
+          </div>
+          
+          <!--CSS DRAWER-->
+          <div id=css>
+            <div class="cssnav">
+              <li class="tab" id=tab1>Styles</li>
+              <li class="tab" id=tab2>Arrributes</li>
+              <li class="tab" id=tab3>PseudoClasses</li>
+              <li class="tab" id=tab4>PseudoElements</li>
+            </div>
+            
+            <img class="css-optionsbar" src='res/icons/save.png'/>
+            <div id="sections">
+              <section class="sec" id=s1>
+                <ul class="cssul" id="s1ul"></ul>
+              </section>
+              <section class="sec" id=s2>
+                <ul class="cssul" id="s2ul"></ul>
+              </section>
+              <section class="sec" id=s3>
+                <div class="subtab" id="pseudoclass"></div>
+                <ul class="cssul" id="s3ul"></ul>
+              </section>
+              <section class="sec" id=s4>
+                <div class="subtab" id="pseudoelement"></div>
+                <ul class="cssul" id="s4ul"></ul>
+              </section>
+            </div>
+       </div>
+       
+      </div>
+  
+  <!--source section-->
+  <div class=content id=sourcepage contenteditable="true"></div>
+  <!--preview session-->
+  <iframe class=content id="previewpage"></iframe>
+  <!--MODAL-->
+  <div class=modal id="modal">
+    <div class=popup>
+      <h5 id=modal-property-text>Null</h5>
+      <input id="modal-text-field" type=text></input>
+      <div class="modal-button-holder">
+        <button id="modal-okbtn">Ok</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

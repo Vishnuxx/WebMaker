@@ -1,0 +1,206 @@
+ @media screen and (orientation:portrait) {
+   #css {
+     grid-area: css;
+     display: none;
+     grid-template: 
+        "cssnav cssoptions"
+        "sections sections" 1fr
+        /1fr 3rem;
+     align-items: start;
+     width: 100%;
+     height:12rem;
+     padding: 0;
+     position: absolute;
+     bottom:0;
+     background: #233243;
+     overflow:hidden;
+     animation-name: fadeInDown;
+     animation-duration: 0.5s;
+     animation-timing-function: ease-in-out;
+     animation-fill-mode: ease-in-out;
+     z-index: 2;
+     box-shadow: 0px 10px 40px #0D2435;
+   }
+   
+.cssul{
+  margin: 0;
+  padding:5px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  height:100%;
+}
+   @keyframes fadeInDown{
+  0%{
+    
+    transform: translateY(100%);
+  }
+  50%{
+    transform: translateY(0%);
+  }
+  70%{
+    transform: translateY(5%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+ }
+ @media screen and (orientation:landscape) {
+   #css {
+     grid-area: css;
+     display: none;
+     grid-template: 
+        "cssnav cssoptions"
+        "sections sections" 1fr
+        /1fr 3rem;
+     align-items: start;
+     width:25%;
+     height:100%;
+     padding: 0;
+     position: absolute;
+     right:0;
+     background: #233243;
+     overflow:hidden;
+     animation-name: fadeInDown;
+     animation-duration: 0.5s;
+     animation-timing-function: ease-in-out;
+     animation-fill-mode: ease-in-out;
+     z-index: 2;
+     box-shadow: 0px 10px 40px #0D2435;
+   }
+   
+.cssul{
+  margin: 0;
+  padding:5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+   @keyframes fadeInDown{
+  0%{
+    
+    transform: translateX(100%);
+  }
+  50%{
+    transform: translateX(0%);
+  }
+  70%{
+    transform: translateX(5%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+ }
+
+
+
+.css-optionsbar{
+  grid-column: cssoptions;
+  width:2rem;
+  height:2rem;
+  padding:3px;
+  justify-self : center;
+}
+
+.css-optionsbar:active{
+  background: #375C84;
+  border-radius: 4px;
+}
+
+
+.cssnav{
+  grid-area: cssnav;
+  width:100%;
+  height:fit-content;
+  background:#25405D;
+  border-radius: 3px 3px 0 0;
+  display: flex;
+  overflow-x: scroll;
+}
+
+#sections{
+  grid-area: sections;
+  margin: 0;
+  height: 100%;
+}
+
+.cssnav li{
+  color:#D2D2D2;
+  list-style: none;
+  font-size: 16px;
+  padding:8px;
+}
+
+.cssnav li:active{
+  background: #233243;
+}
+
+.subtab{
+  grid-area: subtab;
+  display: flex;
+  flex-flow: row;
+  overflow-x: scroll;
+  bottom:0;
+  width:100%;
+  height:30px;
+  border-top: 1px solid #192B39;
+}
+
+
+
+.sec{
+  display: flex;
+  flex-flow: column;
+  align-self: start;
+}
+.subtab-item{
+  margin:2px 2px;
+  background:#3C546E;
+  border:1px solid 888888;
+  color:white;
+  font-weight: 100px;
+  border-radius: 3px;
+  outline:none;
+}
+
+.item{
+  list-style: none;
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width:80px;
+  min-width: 80px;
+  height:80px;
+  background: #3B4B5D;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.item:active{
+  background: #5B6978;
+}
+
+
+.item_icon{
+  display: flex;
+  width:30px;
+  height:30px;
+  display:flex;
+}
+.item_label{
+  display:flex;
+  margin:3px;
+  color:white;
+  font-size: 12px;
+}
+
+.bottom-css{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
